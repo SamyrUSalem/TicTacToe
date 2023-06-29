@@ -1,0 +1,36 @@
+#board {
+    background-color: brown;
+    /*Esse display vai fazer com que o elemento fique igual uma grade mesmo*/
+    display: grid;
+    /*Estou colocando quantos colunas quero q no caso são 3 e ponto o tamanho tambem*/
+    /*1rem equivale a 16px*/
+    grid-template-columns: 6rem 6rem 6rem;
+    /*A mesma coisa q o anterior, mas com as linhas*/
+    grid-template-rows: 6rem 6rem 6rem;
+    /*Esse é o espaço entre a linha e a coluna*/
+    gap: .5rem;
+    /*multiplicando 3x6 por causa q são os valores das colunas e somando com o gap 2x pq ele vai da dois espaços*/
+    max-width: 19rem;
+}
+
+#board span {
+    background-color: whitesmoke;
+    display: grid;
+    font-size: 5rem;
+    /*Método para centralizar o conteúdo dentro do span, mas é necessário usar o display grid*/
+    place-content: center;
+}
+
+
+.cursor {
+    cursor: pointer;
+}
+
+.cursorDef {
+    cursor: default;
+}
+
+/*Classe q será usada quando o jogador vencer*/
+#board span.winner {
+    background-color: greenyellow;
+}
